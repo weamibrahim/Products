@@ -8,6 +8,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 
 import { BrowserRouter } from 'react-router-dom';
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>

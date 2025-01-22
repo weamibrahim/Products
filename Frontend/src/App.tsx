@@ -8,11 +8,13 @@ import ViewProducts from "./Pages/viewProducts";
 import UpdateProduct from "./Pages/updateProduct";
 import AddProduct from "./Pages/addProduct";
 import { LoginProvider } from "./Context/LoginContext";
+import { TokenProvider } from "./Context/TokenContext";
 import ProtectedRoute from "./Components/ProtectRoute";
 function App() {
   return (
     <div className="App">
       <LoginProvider>
+        <TokenProvider>
           <Header />
 
           <Routes>
@@ -25,6 +27,7 @@ function App() {
           </Routes>
 
           <Footer />
+          </TokenProvider>
           </LoginProvider>
     
     </div>
