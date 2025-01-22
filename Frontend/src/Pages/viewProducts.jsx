@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import{ useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaRegEdit } from "react-icons/fa";
 import axios from "axios";
