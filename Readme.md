@@ -1,6 +1,7 @@
 # clothes
 
-
+## **Deployment 
+ we can show it in [https://products-1yu7.vercel.app/]
 
 ## **INTRODUCTION**
 
