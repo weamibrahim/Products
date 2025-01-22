@@ -1,9 +1,9 @@
 import React from 'react'
 
-function updateProduct() {
+function UpdateProduct() {
   return (
     <div>updateProduct</div>
   )
 }
 
-export default updateProduct
+export default UpdateProduct
