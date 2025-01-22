@@ -8,6 +8,7 @@ import ViewProducts from "./Pages/viewProducts";
 import UpdateProduct from "./Pages/updateProduct";
 import AddProduct from "./Pages/addProduct";
 import { LoginProvider } from "./Context/LoginContext";
+import ProtectedRoute from "./Components/ProtectRoute";
 function App() {
   return (
     <div className="App">
@@ -15,9 +16,9 @@ function App() {
           <Header />
 
           <Routes>
-            <Route path="/" element={<ViewProducts />} />
-            <Route path="/create" element={<AddProduct />}/>
-            <Route  path="/update/:id" element={ <UpdateProduct />  } />
+            <Route path="/" element={<ProtectedRoute><ViewProducts /></ProtectedRoute>  } />
+            <Route path="/create" element={<ProtectedRoute><AddProduct /></ProtectedRoute>}/>
+            <Route  path="/update/:id" element={<ProtectedRoute><UpdateProduct /></ProtectedRoute>} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
            
