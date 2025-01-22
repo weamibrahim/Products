@@ -7,11 +7,11 @@ import Login from "./Pages/Login";
 import ViewProducts from "./Pages/viewProducts";
 import UpdateProduct from "./Pages/updateProduct";
 import AddProduct from "./Pages/addProduct";
-
+import { LoginProvider } from "./Context/LoginContext";
 function App() {
   return (
     <div className="App">
-      
+      <LoginProvider>
           <Header />
 
           <Routes>
@@ -24,6 +24,7 @@ function App() {
           </Routes>
 
           <Footer />
+          </LoginProvider>
     
     </div>
   );
