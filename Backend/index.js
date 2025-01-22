@@ -19,6 +19,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 const userRoute = require("./Routes/userRoute");
+const productRoute = require("./Routes/productRoute");
+
+app.use("/product", productRoute);
 app.use("/user", userRoute);
 
 
