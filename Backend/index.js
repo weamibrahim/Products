@@ -3,7 +3,7 @@ const app = express();
 
 const cors = require("cors");
 const mongoose = require("mongoose");
-
+const bodyParser = require("body-parser");
 
 require("dotenv").config();
 
@@ -15,8 +15,11 @@ const mongoURI = process.env.MONGO_URI;
 
 app.use(cors());
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
+const userRoute = require("./Routes/userRoute");
+app.use("/user", userRoute);
 
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
